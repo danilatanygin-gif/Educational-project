@@ -1,11 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>YANKI</title>
 </head>
+
 <body>
-    Hello world!
+    <header>
+        <button type="button" id="burger"> 
+            <img src="assets/images/burger.png" alt="Открыть меню">
+        </button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">NEW</a>
+                </li>
+                <li>
+                    <a href="">Каталог</a>
+                </li>
+                <li>
+                    <a href="">О нас</a>
+                </li>
+            </ul>
+        </nav>
+        <img src="assets/images/YANKI.png" alt="Логотип YANKI">
+        <div>
+            <select name="language">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+            <select name="currency">
+                <option value="uah">UAH</option>
+                <option value="rub">RUB</option>
+            </select>
+        </div>
+        <nav>
+            <a href=""><img src="assets/images/riight-sight-icons/Person.png" alt="Личный кабинет"></a>
+            <a href=""><img src="assets/images/riight-sight-icons/Search.png" alt="Поиск"></a>
+            <a href=""><img src="assets/images/riight-sight-icons/Heart.png" alt="Избранное"></a>
+            <a href=""><img src="assets/images/riight-sight-icons/Basket.png" alt="Корзина"></a>
+        </nav>
+    </header>
+    <main>
+        <section id="newCollection">
+            <h2>Новая коллекция</h2>
+            <a href="">СМОТРЕТЬ НОВИНКИ<span>></span></a>
+        </section>
+        <section id="categories">
+            <h2>Категории</h2>
+            <div id="carousel">
+                <ul>
+                    <li class="category">
+                        <figure>
+                            <img src="assets/images/carousel/Jackets.png" alt="Куртки">
+                            <figcaption>
+                                <a href="" class="category">Куртки</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="category">
+                        <figure>
+                            <img src="assets/images/carousel/Coats.png" alt="Пальто">
+                            <figcaption>
+                                <a href="" class="category">Пальто</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="category">
+                        <figure>
+                            <img src="assets/images/carousel/Fur-coats.png" alt="Шубы">
+                            <figcaption>
+                                <a href="" class="category">Шубы</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="category">
+                        <figure>
+                            <img src="assets/images/carousel/Parks.png" alt="Парки">
+                            <figcaption>
+                                <a href="" class="category">Парки</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <span aria-hidden="true">></span>
+            </div>
+        </section>
+        <section id="subscribe">
+            <form action="" method="get">
+                <h2>Узнайте первым о новинках</h2>
+                <input type='email' name='email' placeholder='Ваш e-mail'>
+                <button type='submit'>Подписаться</button>
+                <small>Нажимая на кнопку "Подписаться", я соглашаюсь на обработку моих персональных данных и
+                    ознакомлен(-а) с
+                    условиями конфиденциальности.</small>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <h2>КОМПАНИЯ</h2>
+            <ul>
+                <li>
+                    <a href="">О нас</a>
+                </li>
+                <li>
+                    <a href="">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <h2>ПОЛЕЗНОЕ</h2>
+            <ul>
+                <li>
+                    <a href="">Оплата и доставка</a>
+                </li>
+                <li>
+                    <a href="">Условия возврата</a>
+                </li>
+                <li>
+                    <a href="">Бонусная система</a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <h2>ПОКУПАТЕЛЮ</h2>
+            <ul>
+                <li>
+                    <a href="">Избранное</a>
+                </li>
+                <li>
+                    <a href="">Публичная оферта</a>
+                </li>
+                <li>
+                    <a href="">Политика конфиденциальности</a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <h2>КОНТАКТЫ</h2>
+            <ul>
+                <li>
+                    <a href=""><img src="assets/images/footer/instagram.png" alt="instagram"></a>
+                </li>
+                <li>
+                    <a href=""><img src="assets/images/footer/telegram.png" alt="telegram"></a>
+                </li>
+            </ul>
+            <address>
+                <a href="tel:+38(073) 096 36 44">+38(073) 096 36 44</a>
+                <a href="mailto:info@yanki.com">info@yanki.com</a>
+            </address>
+        </nav>
+        <p>©️ 2021 Yanki. All rights reserved</p>
+    </footer>
 </body>
+
 </html>
