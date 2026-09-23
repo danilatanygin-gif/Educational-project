@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+</head>
+
+<body>
+    <header>
+        <h1>Погода</h1>
+    </header>
+    <main>
+        <form id="search-form">
+            <label for="city">Город</label>
+            <input type="search" id="city" name="city" required>
+            <button type="submit">Найти</button>
+        </form>
+
+        <p id="status" role="status"></p>
+
+        <section id="current" aria-labelledby="current-title" hidden>
+            <h2 id="current-title">Сейчас</h2>
+
+            <dl>
+                <dt>Город</dt>
+                <dd id="city-name"></dd>
+
+                <dt>Температура</dt>
+                <dd id="temperature"></dd>
+
+                <dt>Ветер</dt>
+                <dd id="wind"></dd>
+            </dl>
+        </section>
+
+        <section id="forecast" aria-labelledby="forecast-title" hidden>
+            <h2 id="forecast-title">Прогноз на 5 дней</h2>
+
+            <ol id="forecast-list">
+                <li>
+                    <!-- Шаблон для прогноза на день -->
+                    <time datetime="2026-09-22">Вт, 22 сентября</time>:
+                    от <data value="8">8°C</data> до <data value="14">14°C</data>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Данные: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>
+        </p>
+    </footer>
+</body>
+
+</html>
