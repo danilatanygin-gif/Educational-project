@@ -9,99 +9,100 @@
 
 <body>
     <header>
-        <button type="button" id="burger"> 
-            <img src="assets/images/burger.png" alt="Открыть меню">
+        <!-- aria-expended(меню закрыто) aria-controls()-->
+        <button type="button" id="burger" aria-expanded="false" aria-controls="menu">
+            <img src="assets/images/burger.png" alt="">
         </button>
-        <nav>
+
+        <!-- Меню, которое открывается при нажатии кнопки с id menu-->
+
+        <nav aria-label="Основная навигация">
             <ul>
-                <li>
-                    <a href="">NEW</a>
-                </li>
-                <li>
-                    <a href="">Каталог</a>
-                </li>
-                <li>
-                    <a href="">О нас</a>
-                </li>
+                <li><a href="">NEW</a></li>
+                <li><a href="">Каталог</a></li>
+                <li><a href="">О нас</a></li>
             </ul>
         </nav>
-        <img src="assets/images/YANKI.png" alt="Логотип YANKI">
+
+        <a href="index.html" aria-current="page">
+            <img src="assets/images/YANKI.png" alt="Логотип YANKI">
+        </a>
+
         <div>
-            <select name="language">
+            <select name="language" aria-label="Выбор языка">
                 <option value="ru">RU</option>
                 <option value="en">EN</option>
             </select>
-            <select name="currency">
+            <select name="currency" aria-label="Выбор валюты">
                 <option value="uah">UAH</option>
                 <option value="rub">RUB</option>
             </select>
         </div>
-        <nav>
-            <a href=""><img src="assets/images/riight-sight-icons/Person.png" alt="Личный кабинет"></a>
-            <a href=""><img src="assets/images/riight-sight-icons/Search.png" alt="Поиск"></a>
-            <a href=""><img src="assets/images/riight-sight-icons/Heart.png" alt="Избранное"></a>
-            <a href=""><img src="assets/images/riight-sight-icons/Basket.png" alt="Корзина"></a>
-        </nav>
+
+        <div>
+            <a href="" aria-label="Поиск">
+                <img src="assets/images/riight-sight-icons/Search.png" alt="" aria-hidden="true">
+            </a>
+            <a href="" aria-label="Личный кабинет">
+                <img src="assets/images/riight-sight-icons/Person.png" alt="" aria-hidden="true">
+            </a>
+            <a href="" aria-label="Избранное">
+                <img src="assets/images/riight-sight-icons/Heart.png" alt="" aria-hidden="true">
+            </a>
+            <a href="" aria-label="Корзина">
+                <img src="assets/images/riight-sight-icons/Basket.png" alt="" aria-hidden="true">
+            </a>
+        </div>
     </header>
+
     <main>
-        <section id="newCollection">
-            <h2>Новая коллекция</h2>
-            <a href="">СМОТРЕТЬ НОВИНКИ<span>></span></a>
+        <section aria-labelledby="hero-title">
+            <h2 id="hero-title">Новая коллекция</h2>
+            <a href="">
+                СМОТРЕТЬ НОВИНКИ
+                <!-- в css нужно добавить стрелочку через after-->
+            </a>
         </section>
-        <section id="categories">
-            <h2>Категории</h2>
+
+        <section aria-labelledby="categories-title">
+            <h2 id="categories-title">Категории</h2>
             <div id="carousel">
                 <ul>
-                    <li class="category">
-                        <figure>
-                            <img src="assets/images/carousel/Jackets.png" alt="Куртки">
-                            <figcaption>
-                                <a href="" class="category">Куртки</a>
-                            </figcaption>
-                        </figure>
+                    <li>
+                        <img src="assets/images/carousel/Jackets.png" alt="" aria-hidden="true">
+                        <a href="">Куртки</a>
                     </li>
-                    <li class="category">
-                        <figure>
-                            <img src="assets/images/carousel/Coats.png" alt="Пальто">
-                            <figcaption>
-                                <a href="" class="category">Пальто</a>
-                            </figcaption>
-                        </figure>
+                    <li>
+                        <img src="assets/images/carousel/Coats.png" alt="" aria-hidden="true">
+                        <a href="">Пальто</a>
                     </li>
-                    <li class="category">
-                        <figure>
-                            <img src="assets/images/carousel/Fur-coats.png" alt="Шубы">
-                            <figcaption>
-                                <a href="" class="category">Шубы</a>
-                            </figcaption>
-                        </figure>
+                    <li>
+                        <img src="assets/images/carousel/Fur-coats.png" alt="" aria-hidden="true">
+                        <a href="">Шубы</a>
                     </li>
-                    <li class="category">
-                        <figure>
-                            <img src="assets/images/carousel/Parks.png" alt="Парки">
-                            <figcaption>
-                                <a href="" class="category">Парки</a>
-                            </figcaption>
-                        </figure>
+                    <li>
+                        <img src="assets/images/carousel/Parks.png" alt="" aria-hidden="true">
+                        <a href="">Парки</a>
                     </li>
                 </ul>
                 <span aria-hidden="true">></span>
             </div>
         </section>
-        <section id="subscribe">
+        <section aria-labelledby="form-title">
+            <h2 id="form-title">Узнайте первым о новинках</h2>
             <form action="" method="get">
-                <h2>Узнайте первым о новинках</h2>
-                <input type='email' name='email' placeholder='Ваш e-mail'>
+                <input type='email' name='email' placeholder='Ваш e-mail' aria-label="Ваш e-mail">
                 <button type='submit'>Подписаться</button>
-                <small>Нажимая на кнопку "Подписаться", я соглашаюсь на обработку моих персональных данных и
+                <span>Нажимая на кнопку "Подписаться", я соглашаюсь на обработку моих персональных данных и
                     ознакомлен(-а) с
-                    условиями конфиденциальности.</small>
+                    условиями конфиденциальности.</span>
             </form>
         </section>
     </main>
+
     <footer>
-        <nav>
-            <h2>КОМПАНИЯ</h2>
+        <nav aria-labelledby="company-title">
+            <h2 id="company-title">КОМПАНИЯ</h2>
             <ul>
                 <li>
                     <a href="">О нас</a>
@@ -111,8 +112,8 @@
                 </li>
             </ul>
         </nav>
-        <nav>
-            <h2>ПОЛЕЗНОЕ</h2>
+        <nav aria-labelledby="useful-title">
+            <h2 id="useful-title">ПОЛЕЗНОЕ</h2>
             <ul>
                 <li>
                     <a href="">Оплата и доставка</a>
@@ -125,8 +126,8 @@
                 </li>
             </ul>
         </nav>
-        <nav>
-            <h2>ПОКУПАТЕЛЮ</h2>
+        <nav aria-labelledby="buyer-title">
+            <h2 id="buyer-title">ПОКУПАТЕЛЮ</h2>
             <ul>
                 <li>
                     <a href="">Избранное</a>
@@ -139,14 +140,18 @@
                 </li>
             </ul>
         </nav>
-        <nav>
-            <h2>КОНТАКТЫ</h2>
+        <nav aria-labelledby="contact-title">
+            <h2 id="contact-title">КОНТАКТЫ</h2>
             <ul>
                 <li>
-                    <a href=""><img src="assets/images/footer/instagram.png" alt="instagram"></a>
+                    <a href="" aria-label="instagram">
+                        <img src="assets/images/footer/instagram.png" alt="" aria-hidden="true">
+                    </a>
                 </li>
                 <li>
-                    <a href=""><img src="assets/images/footer/telegram.png" alt="telegram"></a>
+                    <a href="" aria-label="telegram">
+                        <img src="assets/images/footer/telegram.png" alt="" aria-hidden="true">
+                    </a>
                 </li>
             </ul>
             <address>
