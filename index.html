@@ -1,59 +1,170 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Погода</title>
+    <title>YANKI</title>
 </head>
+
 
 <body>
     <header>
-        <h1>Погода</h1>
+        <!-- aria-expanded(меню закрыто) aria-controls()-->
+        <button type="button" id="burger" aria-expanded="false" aria-label="Открыть меню">
+            <img src="assets/images/burger.png" alt="">
+        </button>
+
+        <!-- Меню, которое открывается при нажатии кнопки с id menu-->
+
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="new.html">NEW</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+
+        <a href="index.html" aria-current="page">
+            <img src="assets/images/YANKI.png" alt="Логотип YANKI">
+        </a>
+
+        <div>
+            <select name="language" aria-label="Выбор языка">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+            <select name="currency" aria-label="Выбор валюты">
+                <option value="uah">UAH</option>
+                <option value="rub">RUB</option>
+            </select>
+        </div>
+
+        <div>
+            <a href="search.html" aria-label="Поиск">
+                <img src="assets/images/riight-sight-icons/Search.png" alt="" aria-hidden="true">
+            </a>
+            <a href="account.html" aria-label="Личный кабинет">
+                <img src="assets/images/riight-sight-icons/Person.png" alt="" aria-hidden="true">
+            </a>
+            <a href="favorites.html" aria-label="Избранное">
+                <img src="assets/images/riight-sight-icons/Heart.png" alt="" aria-hidden="true">
+            </a>
+            <a href="cart.html" aria-label="Корзина">
+                <img src="assets/images/riight-sight-icons/Basket.png" alt="" aria-hidden="true">
+            </a>
+        </div>
     </header>
+
     <main>
-        <form id="search-form">
-            <label for="city">Город</label>
-            <input type="search" id="city" name="city" required>
-            <button type="submit">Найти</button>
-        </form>
-
-        <p id="status" role="status"></p>
-
-        <section id="current" aria-labelledby="current-title" hidden>
-            <h2 id="current-title">Сейчас</h2>
-
-            <dl>
-                <dt>Город</dt>
-                <dd id="city-name"></dd>
-
-                <dt>Температура</dt>
-                <dd id="temperature"></dd>
-
-                <dt>Ветер</dt>
-                <dd id="wind"></dd>
-            </dl>
+        <section aria-labelledby="hero-title">
+            <h1 id="hero-title">Новая коллекция</h1>
+            <a href="new.html">
+                СМОТРЕТЬ НОВИНКИ
+                <!-- в css нужно добавить стрелочку через after-->
+            </a>
         </section>
 
-        <section id="forecast" aria-labelledby="forecast-title" hidden>
-            <h2 id="forecast-title">Прогноз на 5 дней</h2>
-
-            <ol id="forecast-list">
-                <li>
-                    <!-- Шаблон для прогноза на день -->
-                    <time datetime="2026-09-22">Вт, 22 сентября</time>:
-                    от <data value="8">8°C</data> до <data value="14">14°C</data>
-                </li>
-            </ol>
+        <section aria-labelledby="categories-title">
+            <h2 id="categories-title">Категории</h2>
+            <div id="carousel">
+                <ul>
+                    <li>
+                        <img src="assets/images/carousel/Jackets.png" alt="" aria-hidden="true">
+                        <a href="jackets.html">Куртки</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/carousel/Coats.png" alt="" aria-hidden="true">
+                        <a href="coats.html">Пальто</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/carousel/Fur-coats.png" alt="" aria-hidden="true">
+                        <a href="fur-coats.html">Шубы</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/carousel/Parks.png" alt="" aria-hidden="true">
+                        <a href="parks.html">Парки</a>
+                    </li>
+                </ul>
+                <button type="button" aria-label="Следующие категории">&gt;</button>
+            </div>
         </section>
-
+        <div>
+            <form action="#" method="post">
+                <label for="email">Узнайте первым о новинках</label>
+                <input type="email" id="email" name="email" placeholder="Ваш e-mail" autocomplete="email" required
+                    aria-label="Ваш e-mail">
+                <button type="submit">Подписаться</button>
+                <p>Нажимая на кнопку "Подписаться", я соглашаюсь на обработку моих персональных данных и
+                    ознакомлен(-а) с
+                    условиями конфиденциальности.</p>
+            </form>
+        </div>
     </main>
 
     <footer>
-        <p>
-            Данные: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>
-        </p>
+        <nav aria-labelledby="company-title">
+            <h2 id="company-title">КОМПАНИЯ</h2>
+            <ul>
+                <li>
+                    <a href="about.html">О нас</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <nav aria-labelledby="useful-title">
+            <h2 id="useful-title">ПОЛЕЗНОЕ</h2>
+            <ul>
+                <li>
+                    <a href="payment.html">Оплата и доставка</a>
+                </li>
+                <li>
+                    <a href="returns.html">Условия возврата</a>
+                </li>
+                <li>
+                    <a href="bonus.html">Бонусная система</a>
+                </li>
+            </ul>
+        </nav>
+        <nav aria-labelledby="buyer-title">
+            <h2 id="buyer-title">ПОКУПАТЕЛЮ</h2>
+            <ul>
+                <li>
+                    <a href="favorites.html">Избранное</a>
+                </li>
+                <li>
+                    <a href="offer.html">Публичная оферта</a>
+                </li>
+                <li>
+                    <a href="privacy.html">Политика конфиденциальности</a>
+                </li>
+            </ul>
+        </nav>
+        <nav aria-labelledby="contact-title">
+            <h2 id="contact-title">КОНТАКТЫ</h2>
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/yanki/" aria-label="instagram">
+                        <img src="assets/images/footer/instagram.png" alt="" aria-hidden="true">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/yanki" aria-label="telegram">
+                        <img src="assets/images/footer/telegram.png" alt="" aria-hidden="true">
+                    </a>
+                </li>
+            </ul>
+            <address>
+                <a href="tel:+380730963644">+38(073) 096 36 44</a>
+                <a href="mailto:info@yanki.com">info@yanki.com</a>
+            </address>
+        </nav>
+        <p>©️ 2021 Yanki. All rights reserved</p>
     </footer>
 </body>
+
 
 </html>

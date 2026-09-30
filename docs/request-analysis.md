@@ -12,7 +12,7 @@
 # Заголовки ответа
 - "date" : "Wed, 23 Sep 2026 05:19:20 GMT"
 - "server" : "ESF"
-- "set-cookie" : "SIDCC=AKEyXzWXHmUPfKfSejfKIgQHdgo6sUNY37ov1cCd_qKYIRsKvAFDEVyjCu_T0b7sNmU8d6T9Ymw; expires=Thu, 23-Sep-2027 05:19:20 GMT; path=/; domain=.google.com; priority=high"
+- "cross-origin-opener-policy" : "same-origin-allow-popups; report-to='gws'"
 
 # Описание
 Браузер запросил фоновый скрипт методом GET. В ответ сервер вернул HTML-страницу с типом содержимого text/html, а статус ответа 200, что означает успешную загрузку контента.
