@@ -1,2 +1,28 @@
 /*Подключение normalize.css для единых стилей во всех браузерах*/
 @import './normalize.css'; 
+/*Подключение стилей для базовых элементов*/
+@import './base.css';
+/*Подключение стилей для шрифтов*/
+@import './fonts.css';
+/*Подключение стилей для header*/
+@import './header.css';
+/*Подключение стилей для блока burger*/
+@import './burger.css';
+/*Подключение стилей для блока nav*/
+@import './nav.css';
+/*Подключение стилей для блока switcher*/
+@import './switcher.css';
+/*Подключаем стилей main*/
+@import './main.css';
+/*Подключение стилей для блока hero*/
+@import './hero.css';
+/*Подключение стилей для блока categories*/
+@import './categories.css';
+/*Подключение стилей для блока carousel*/
+@import './carousel.css';
+/*Подключение стилей для блока mailing*/
+@import './mailing.css';
+/*Подключение стилей для блока footer*/
+@import './footer.css';
+/*Подключение стилей для блока icon-link*/
+@import './icon-link.css';

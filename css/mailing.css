@@ -1,0 +1,60 @@
+.mailing {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mailing__title {
+    color: var(--color-dark-text);
+    font-weight: 300;
+    font-size: 36px;
+}
+
+.mailing__form {
+    height: auto;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mailing__label {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.mailing__input {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: #25252580;
+    font-weight: var(--font-weight);
+    font-size: 16px;
+}
+
+.mailing__submit {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: var(--color-light-text);
+    font-weight: var(--font-weight);
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #E0BEA2;
+    border: none;
+    padding: 0;
+}
+
+.mailing__policy {
+    text-align: center;
+    color: var(--color-dark-text);
+    font-weight: 200;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
