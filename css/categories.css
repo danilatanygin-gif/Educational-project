@@ -1,0 +1,34 @@
+.categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories__title {
+    color: var(--color-dark-text, #252525);
+    font-weight: var(--font-weight-light,300);
+    font-size: 36px;
+}
+
+.category-card {
+    position: relative;
+    display: block;
+    max-width: 274px;
+}
+
+.category-card__image {
+    width: 100%;
+    height: auto;
+}
+
+.category-card__name {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-block: 10px;
+    bottom: 0;
+    color: var(--color-light-text,#ffffff);
+    font-weight: var(--font-weight-light,300);
+    font-size: 20px;
+    background-color: #E0BEA2BF;
+}
