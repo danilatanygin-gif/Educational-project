@@ -1,9 +1,8 @@
 :root {
     --color-dark-text: #252525;
     --color-light-text: #ffffff;
-    --color-brown: #E0BEA2;
-    --header-font-size: 18px;
-    --font-weight: 300;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
     --header-gap: 80px;
 }
 
@@ -14,22 +13,34 @@
 }
 
 html {
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    color: var(--color-text);
 }
 
 section {
-    scroll-margin-block-start: 80px;
+    scroll-margin-block-start: var(--header-gap, 80px);
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #0076ff;
+    outline-offset: 2px;
 }
 
 img {

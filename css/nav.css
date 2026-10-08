@@ -7,7 +7,7 @@
 .nav__list--horizontal {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav__list--vertical {
@@ -22,16 +22,21 @@
     align-items: start;
 }
 
+.nav__link:hover{
+    scale: 1.1;
+    transition: 0.2s;
+}
+
 .nav__link--light {
     display: inline-block;
     text-transform: uppercase;
-    color: var(--color-light-text);
-    font-size: var(--header-font-size);
-    font-weight: var(--font-weight);
+    color: var(--color-light-text,#ffffff);
+    font-size: 18px;
+    font-weight: var(--font-weight-light,300);
 }
 
 .nav__link--dark {
     font-size: 16px;
-    color: var(--color-dark-text);
-    font-weight: var(--font-weight);
+    color: var(--color-dark-text,#252525);
+    font-weight: var(--font-weight-light,300);
 }

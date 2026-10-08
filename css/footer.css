@@ -17,8 +17,8 @@
 }
 
 .footer__title {
-    color: var(--color-dark-text);
-    font-weight: 300;
+    color: var(--color-dark-text,#252525);
+    font-weight: var(--font-weight-light,300);
     font-size: 20px;
     text-transform: uppercase;
 }
@@ -43,15 +43,15 @@
 
 .footer__contact {
     font-style: normal;
-    color: var(--color-dark-text);
+    color: var(--color-dark-text,#252525);
     font-size: 16px;
-    font-weight: 200;
+    font-weight: var(--font-weight-extra-light,200);
 }
 
 .footer__copyright{
     width: 100%;
     text-align: center;
-    color: var(--color-dark-text);
+    color: var(--color-dark-text,#252525);
     font-size: 12px;
-    font-weight: 300;
+    font-weight: var(--font-weight-light,300);
 }

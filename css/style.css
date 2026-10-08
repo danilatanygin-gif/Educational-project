@@ -16,10 +16,10 @@
 @import './main.css';
 /*Подключение стилей для блока hero*/
 @import './hero.css';
-/*Подключение стилей для блока categories*/
-@import './categories.css';
 /*Подключение стилей для блока carousel*/
 @import './carousel.css';
+/*Подключение стилей для блока categories*/
+@import './categories.css';
 /*Подключение стилей для блока mailing*/
 @import './mailing.css';
 /*Подключение стилей для блока footer*/

@@ -5,8 +5,8 @@
 }
 
 .mailing__title {
-    color: var(--color-dark-text);
-    font-weight: 300;
+    color: var(--color-dark-text,#252525);
+    font-weight: var(--font-weight-light,300);
     font-size: 36px;
 }
 
@@ -33,16 +33,23 @@
     width: 100%;
     text-align: center;
     color: #25252580;
-    font-weight: var(--font-weight);
+    font-weight: var(--font-weight-light,300);
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.mailing__input:focus-visible{
+    outline: 3px solid #0076ff;
+    outline-offset: 2px;
 }
 
 .mailing__submit {
     height: 50px;
     width: 100%;
     text-align: center;
-    color: var(--color-light-text);
-    font-weight: var(--font-weight);
+    color: var(--color-light-text,#ffffff);
+    font-weight: var(--font-weight-light,300);
     font-size: 16px;
     text-transform: uppercase;
     background-color: #E0BEA2;
@@ -52,8 +59,8 @@
 
 .mailing__policy {
     text-align: center;
-    color: var(--color-dark-text);
-    font-weight: 200;
+    color: var(--color-dark-text,#252525);
+    font-weight: var(--font-weight-extra-light,200);
     font-size: 16px;
     margin: 0;
     padding: 0;

@@ -6,9 +6,10 @@
 
 .switcher__item {
     display: none;
-    font-size: var(--header-font-size);
-    font-weight: var(--font-weight);
-    color: var(--color-light-text);
+    height: 21px;
+    font-size: 18px;
+    font-weight: var(--font-weight-light,300);
+    color: var(--color-light-text,#ffffff);
     text-transform: uppercase;
     text-decoration: none;
     padding: 0;
@@ -22,7 +23,21 @@
     cursor: pointer;
 }
 
+.switcher__item--active:hover{
+    scale: 1.1;
+    transition: 0.2s;
+}
+
 .switcher__item--active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -28px;
+    width: 28px;
+    height: 100%;
+}
+
+.switcher__item--active::before {
     position: absolute;
     top: 4px;
     right: -14px;
