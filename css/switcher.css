@@ -22,11 +22,12 @@
   padding: 0 20px 0 0;
   position: relative;
   cursor: pointer;
+  transition: scale var(--transition-fast, 0.2s);
 }
 
-.switcher__item--active:hover {
+.switcher__item--active:hover,
+.switcher__item--active:focus-visible {
   scale: 1.1;
-  transition: 0.2s;
 }
 
 .switcher__item--active::before {

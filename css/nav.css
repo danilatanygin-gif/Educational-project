@@ -6,6 +6,7 @@
 
 .nav__list--horizontal {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: clamp(0.625rem, 0.105rem + 2.48vw, 1.875rem);
 }
@@ -22,9 +23,13 @@
   align-items: start;
 }
 
-.nav__link:hover {
+.nav__link {
+  transition: scale var(--transition-fast, 0.2s);
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
   scale: 1.1;
-  transition: 0.2s;
 }
 
 .nav__link--light {

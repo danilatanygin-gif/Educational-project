@@ -8,6 +8,7 @@
 
 .mailing__title {
   color: var(--color-dark, #252525);
+  text-align: center;
   font-weight: var(--font-weight-light, 300);
   font-size: clamp(1.5rem, 1.188rem + 1.49vw, 2.25rem);
 }

@@ -6,6 +6,7 @@
   --font-weight-extra-light: 200;
   --font-weight-light: 300;
   --header-gap: clamp(0.625rem, 0.105rem + 2.48vw, 1.875rem);
+  --transition-fast: 0.2s;
 }
 
 *,
@@ -70,4 +71,15 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0s;
+  }
+
+  html,
+  .carousel__list {
+    scroll-behavior: auto;
+  }
 }

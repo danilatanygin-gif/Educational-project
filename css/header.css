@@ -18,15 +18,17 @@
   grid-column: 3;
   width: clamp(5rem, 2.919rem + 9.94vw, 10rem);
   justify-self: center;
+  transition: scale var(--transition-fast, 0.2s);
 }
 
-.site-header__logo:hover {
+.site-header__logo:hover,
+.site-header__logo:focus-visible {
   scale: 1.1;
-  transition: 0.2s;
 }
 
 .site-header__locale {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: clamp(0.625rem, 0.105rem + 2.48vw, 1.875rem);
 }
@@ -34,6 +36,7 @@
 .site-header__actions {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: clamp(0.625rem, 0.105rem + 2.48vw, 1.875rem);
 }
 
@@ -65,7 +68,7 @@
     grid-column: 5;
   }
 
-  .site-header__nav {
+  /*.site-header__nav {
     display: none;
   }
 
@@ -79,5 +82,5 @@
 
   .icon-link--person {
     display: none;
-  }
+  }*/
 }

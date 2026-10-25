@@ -1,5 +1,6 @@
 .icon-link {
   text-decoration: none;
+  transition: scale var(--transition-fast, 0.2s);
 }
 
 .icon-link__image--header {
@@ -7,7 +8,7 @@
   height: clamp(1.25rem, 1.12rem + 0.62vw, 1.563rem);
 }
 
-.icon-link:hover {
+.icon-link:hover,
+.icon-link:focus-visible {
   scale: 1.1;
-  transition: 0.2s;
 }

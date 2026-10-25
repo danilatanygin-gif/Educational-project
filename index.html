@@ -132,8 +132,7 @@
 
     </section>
 
-    <section class="mailing container" aria-labelledby="mailing-title">
-      <h2 class="mailing__title" id="mailing-title">Узнайте первым о новинках</h2>
+    <section class="mailing container" aria-labelledby="mailing-t" id="mailing-title">Узнайте первым о новинках</h2>
 
       <form class="mailing__form" action="#" method="post">
         <label class="mailing__label" for="mailing-email">Ваш e-mail</label>
@@ -154,101 +153,94 @@
   </main>
 
 
-  <footer class="footer">
+  <footer class="footer container">
 
-    <div class="footer__inner container">
+    <div class="footer__column">
+      <h2 class="footer__title">
+        <button class="footer__toggle" id="company-title" type="button" aria-controls="company-nav">
+          Компания
+        </button>
+      </h2>
 
-      <div class="footer__column">
-        <h2 class="footer__title">
-          <button class="footer__toggle" id="company-title" type="button" aria-expanded="false"
-            aria-controls="company-nav">
-            Компания
-          </button>
-        </h2>
-
-        <nav class="nav footer__nav" id="company-nav" aria-labelledby="company-title">
-          <ul class="nav__list nav__list--vertical nav__list--centered">
-            <li class="nav__item">
-              <a class="nav__link nav__link--dark" href="about.html">О нас</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--dark" href="contacts.html">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-
-      </div>
-
-      <div class="footer__column">
-        <h2 class="footer__title">
-          <button class="footer__toggle" id="useful-title" type="button" aria-expanded="false"
-            aria-controls="useful-nav">
-            Полезное
-          </button>
-        </h2>
-
-        <nav class="nav footer__nav" id="useful-nav" aria-labelledby="useful-title">
-          <ul class="nav__list nav__list--vertical nav__list--centered">
-            <li class="nav__item">
-              <a class="nav__link nav__link--dark" href="payment.html">Оплата и доставка</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--dark" href="returns.html">Условия возврата</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--dark" href="bonus.html">Бонусная система</a>
-            </li>
-          </ul>
-        </nav>
-
-      </div>
-
-      <div class="footer__column">
-        <h2 class="footer__title">
-          <button class="footer__toggle" id="customer-title" type="button" aria-expanded="false"
-            aria-controls="customer-nav">
-            Покупателю
-          </button>
-        </h2>
-
-        <nav class="nav footer__nav" id="customer-nav" aria-labelledby="customer-title">
-          <ul class="nav__list nav__list--vertical nav__list--centered">
-            <li class="nav__item">
-              <a class="nav__link nav__link--dark" href="favorites.html">Избранное</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--dark" href="offer.html">Публичная оферта</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--dark" href="privacy.html">Политика конфиденциальности</a>
-            </li>
-          </ul>
-        </nav>
-
-      </div>
-
-      <div class="footer__column">
-        <h2 class="footer__title">Контакты</h2>
-
-        <ul class="footer__social">
-          <li>
-            <a class="icon-link" href="https://www.instagram.com/yanki/" aria-label="Instagram">
-              <img class="icon-link__image" src="assets/images/footer/instagram.svg" width="19" height="19" alt="">
-            </a>
+      <nav class="nav footer__nav" id="company-nav" aria-labelledby="company-title">
+        <ul class="nav__list nav__list--vertical nav__list--centered">
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="about.html">О нас</a>
           </li>
-          <li>
-            <a class="icon-link" href="https://t.me/yanki" aria-label="Telegram">
-              <img class="icon-link__image" src="assets/images/footer/telegram.svg" width="19" height="19" alt="">
-            </a>
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="contacts.html">Контакты</a>
           </li>
         </ul>
+      </nav>
 
-        <address class="footer__address">
-          <a class="footer__contact" href="tel:+380730963644">+38 (073) 096 36 44</a>
-          <a class="footer__contact" href="mailto:info@yanki.com">info@yanki.com</a>
-        </address>
+    </div>
 
-      </div>
+    <div class="footer__column">
+      <h2 class="footer__title">
+        <button class="footer__toggle" id="useful-title" type="button" aria-controls="useful-nav">
+          Полезное
+        </button>
+      </h2>
+
+      <nav class="nav footer__nav" id="useful-nav" aria-labelledby="useful-title">
+        <ul class="nav__list nav__list--vertical nav__list--centered">
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="payment.html">Оплата и доставка</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="returns.html">Условия возврата</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="bonus.html">Бонусная система</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer__column">
+      <h2 class="footer__title">
+        <button class="footer__toggle" id="customer-title" type="button" aria-controls="customer-nav">
+          Покупателю
+        </button>
+      </h2>
+
+      <nav class="nav footer__nav" id="customer-nav" aria-labelledby="customer-title">
+        <ul class="nav__list nav__list--vertical nav__list--centered">
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="favorites.html">Избранное</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="offer.html">Публичная оферта</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="privacy.html">Политика конфиденциальности</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer__column">
+      <h2 class="footer__title">Контакты</h2>
+
+      <ul class="footer__social">
+        <li>
+          <a class="icon-link" href="https://www.instagram.com/yanki/" aria-label="Instagram">
+            <img class="icon-link__image" src="assets/images/footer/instagram.svg" width="19" height="19" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="icon-link" href="https://t.me/yanki" aria-label="Telegram">
+            <img class="icon-link__image" src="assets/images/footer/telegram.svg" width="19" height="19" alt="">
+          </a>
+        </li>
+      </ul>
+
+      <address class="footer__address">
+        <a class="footer__contact" href="tel:+380730963644">+38 (073) 096 36 44</a>
+        <a class="footer__contact" href="mailto:info@yanki.com">info@yanki.com</a>
+      </address>
 
     </div>
 

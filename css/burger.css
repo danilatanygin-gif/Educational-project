@@ -8,11 +8,12 @@
   border: 0;
   background: none;
   cursor: pointer;
+  transition: scale var(--transition-fast, 0.2s);
 }
 
-.burger:hover {
+.burger:hover,
+.burger:focus-visible {
   scale: 1.1;
-  transition: 0.2s;
 }
 
 .burger__bar {
