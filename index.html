@@ -9,114 +9,132 @@
 </head>
 
 <body class="page">
+
   <header class="site-header">
+
     <div class="site-header__inner container">
-      <div class="site-header__left">
-        <button class="burger site-header__burger js-burger" type="button" aria-expanded="false"
-          aria-label="Открыть меню">
-          <span class="burger__bar"></span>
-        </button>
-        <nav class="nav site-header__nav" aria-label="Основная навигация">
-          <ul class="nav__list nav__list--horizontal">
-            <li class="nav__item">
-              <a class="nav__link nav__link--light" href="new.html">NEW</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--light" href="catalog.html">Каталог</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--light" href="about.html">О нас</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+
+      <button class="burger site-header__burger js-burger" type="button" aria-expanded="false"
+        aria-label="Открыть меню">
+        <span class="burger__bar"></span>
+      </button>
+
+      <nav class="site-header__nav nav" aria-label="Основная навигация">
+        <ul class="nav__list nav__list--horizontal">
+          <li class="nav__item">
+            <a class="nav__link nav__link--light" href="new.html">NEW</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--light" href="catalog.html">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--light" href="about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+
 
       <a class="logo site-header__logo" href="index.html" aria-label="YANKI" aria-current="page">
         <img class="logo__image" src="assets/images/YANKI.svg" alt="" width="160" height="40">
       </a>
 
-      <div class="site-header__right">
-        <div class="site-header__locale">
-          <div class="switcher site-header__language" role="group" aria-label="Выбор языка">
-            <button class="switcher__item switcher__item--active" type="button" aria-current="true"
-              lang="ru">RU</button>
-            <a class="switcher__item" href="uk.html" lang="uk">UK</a>
-            <a class="switcher__item" href="en.html" lang="en">EN</a>
-          </div>
-          <div class="switcher site-header__currency" role="group" aria-label="Выбор валюты">
-            <button class="switcher__item switcher__item--active" type="button">UAH</button>
-            <button class="switcher__item" type="button">USD</button>
-            <button class="switcher__item" type="button">EUR</button>
-          </div>
+      <div class="site-header__locale">
+        <div class="switcher site-header__language" role="group" aria-label="Выбор языка">
+          <button class="switcher__item switcher__item--active" type="button" aria-current="true" lang="ru">RU</button>
+          <a class="switcher__item" href="uk.html" lang="uk">UK</a>
+          <a class="switcher__item" href="en.html" lang="en">EN</a>
         </div>
 
-        <div class="site-header__actions">
-          <a class="icon-link" href="search.html" aria-label="Поиск">
-            <img class="icon-link__image" src="assets/images/actions_icons/Search.svg" width="25" height="25" alt="">
-          </a>
-          <a class="icon-link" href="account.html" aria-label="Личный кабинет">
-            <img class="icon-link__image" src="assets/images/actions_icons/Person.svg" width="25" height="25" alt="">
-          </a>
-          <a class="icon-link" href="favorites.html" aria-label="Избранное">
-            <img class="icon-link__image" src="assets/images/actions_icons/Heart.svg" width="25" height="25" alt="">
-          </a>
-          <a class="icon-link" href="cart.html" aria-label="Корзина">
-            <img class="icon-link__image" src="assets/images/actions_icons/Basket.svg" width="25" height="25" alt="">
-          </a>
+        <div class="switcher site-header__currency" role="group" aria-label="Выбор валюты">
+          <button class="switcher__item switcher__item--active" type="button">UAH</button>
+          <button class="switcher__item" type="button">USD</button>
+          <button class="switcher__item" type="button">EUR</button>
         </div>
       </div>
+
+      <div class="site-header__actions">
+        <a class="icon-link icon-link--search" href="search.html" aria-label="Поиск">
+          <img class="icon-link__image--header" src="assets/images/actions_icons/Search.svg" width="25" height="25"
+            alt="">
+        </a>
+
+        <a class="icon-link icon-link--person" href="account.html" aria-label="Личный кабинет">
+          <img class="icon-link__image--header" src="assets/images/actions_icons/Person.svg" width="25" height="25"
+            alt="">
+        </a>
+
+        <a class="icon-link icon-link--heart" href="favorites.html" aria-label="Избранное">
+          <img class="icon-link__image--header" src="assets/images/actions_icons/Heart.svg" width="25" height="25"
+            alt="">
+        </a>
+
+        <a class="icon-link icon-link--basket" href="cart.html" aria-label="Корзина">
+          <img class="icon-link__image--header" src="assets/images/actions_icons/Basket.svg" width="25" height="25"
+            alt="">
+        </a>
+      </div>
+
     </div>
+
   </header>
 
+
   <main class="main">
+
     <section class="hero" aria-labelledby="hero-title">
       <h1 class="hero__title" id="hero-title">Новая коллекция</h1>
+
       <a class="hero__link" href="new.html">
         Смотреть новинки
       </a>
+
     </section>
 
     <section class="categories container" aria-labelledby="categories-title">
       <h2 class="categories__title" id="categories-title">Категории</h2>
+
       <div class="carousel categories__carousel js-carousel" role="region" aria-roledescription="карусель"
         aria-label="Категории">
+
         <ul class="carousel__list" id="categories-list">
           <li class="carousel__item">
             <a class="category-card" href="jackets.html">
-              <img class="category-card__image" src="assets/images/carousel/Jackets.svg" width="274" height="450"
+              <img class="category-card__image" src="assets/images/carousel/Jackets.jpg" width="274" height="450"
                 alt="">
               <span class="category-card__name">Куртки</span>
             </a>
           </li>
           <li class="carousel__item">
             <a class="category-card" href="coats.html">
-              <img class="category-card__image" src="assets/images/carousel/Coats.svg" width="274" height="450" alt="">
+              <img class="category-card__image" src="assets/images/carousel/Coats.jpg" width="274" height="450" alt="">
               <span class="category-card__name">Пальто</span>
             </a>
           </li>
           <li class="carousel__item">
             <a class="category-card" href="fur-coats.html">
-              <img class="category-card__image" src="assets/images/carousel/Fur-coats.svg" width="274" height="450"
+              <img class="category-card__image" src="assets/images/carousel/Fur-coats.jpg" width="274" height="450"
                 alt="">
               <span class="category-card__name">Шубы</span>
             </a>
           </li>
           <li class="carousel__item">
             <a class="category-card" href="parks.html">
-              <img class="category-card__image" src="assets/images/carousel/Parks.svg" width="274" height="450" alt="">
+              <img class="category-card__image" src="assets/images/carousel/Parks.jpg" width="274" height="450" alt="">
               <span class="category-card__name">Парки</span>
             </a>
           </li>
         </ul>
-        <button class="carousel__button carousel__button--prev" type="button" aria-label="Предыдущие категории"
-          aria-controls="categories-list"></button>
+
         <button class="carousel__button carousel__button--next" type="button" aria-label="Следующие категории"
           aria-controls="categories-list"></button>
+
       </div>
+
     </section>
 
     <section class="mailing container" aria-labelledby="mailing-title">
       <h2 class="mailing__title" id="mailing-title">Узнайте первым о новинках</h2>
+
       <form class="mailing__form" action="#" method="post">
         <label class="mailing__label" for="mailing-email">Ваш e-mail</label>
         <input class="mailing__input" type="email" id="mailing-email" name="email" placeholder="Ваш e-mail*"
@@ -130,15 +148,26 @@
         </p>
         <p class="mailing__message" role="status"></p>
       </form>
+
     </section>
+
   </main>
 
+
   <footer class="footer">
+
     <div class="footer__inner container">
+
       <div class="footer__column">
-        <h2 class="footer__title" id="company-title">Компания</h2>
-        <nav class="nav" aria-labelledby="company-title">
-          <ul class="nav__list nav__list--vertical">
+        <h2 class="footer__title">
+          <button class="footer__toggle" id="company-title" type="button" aria-expanded="false"
+            aria-controls="company-nav">
+            Компания
+          </button>
+        </h2>
+
+        <nav class="nav footer__nav" id="company-nav" aria-labelledby="company-title">
+          <ul class="nav__list nav__list--vertical nav__list--centered">
             <li class="nav__item">
               <a class="nav__link nav__link--dark" href="about.html">О нас</a>
             </li>
@@ -147,11 +176,19 @@
             </li>
           </ul>
         </nav>
+
       </div>
+
       <div class="footer__column">
-        <h2 class="footer__title" id="useful-title">Полезное</h2>
-        <nav class="nav" aria-labelledby="useful-title">
-          <ul class="nav__list nav__list--vertical">
+        <h2 class="footer__title">
+          <button class="footer__toggle" id="useful-title" type="button" aria-expanded="false"
+            aria-controls="useful-nav">
+            Полезное
+          </button>
+        </h2>
+
+        <nav class="nav footer__nav" id="useful-nav" aria-labelledby="useful-title">
+          <ul class="nav__list nav__list--vertical nav__list--centered">
             <li class="nav__item">
               <a class="nav__link nav__link--dark" href="payment.html">Оплата и доставка</a>
             </li>
@@ -163,11 +200,19 @@
             </li>
           </ul>
         </nav>
+
       </div>
+
       <div class="footer__column">
-        <h2 class="footer__title" id="buyer-title">Покупателю</h2>
-        <nav class="nav" aria-labelledby="buyer-title">
-          <ul class="nav__list nav__list--vertical">
+        <h2 class="footer__title">
+          <button class="footer__toggle" id="customer-title" type="button" aria-expanded="false"
+            aria-controls="customer-nav">
+            Покупателю
+          </button>
+        </h2>
+
+        <nav class="nav footer__nav" id="customer-nav" aria-labelledby="customer-title">
+          <ul class="nav__list nav__list--vertical nav__list--centered">
             <li class="nav__item">
               <a class="nav__link nav__link--dark" href="favorites.html">Избранное</a>
             </li>
@@ -179,9 +224,12 @@
             </li>
           </ul>
         </nav>
+
       </div>
+
       <div class="footer__column">
         <h2 class="footer__title">Контакты</h2>
+
         <ul class="footer__social">
           <li>
             <a class="icon-link" href="https://www.instagram.com/yanki/" aria-label="Instagram">
@@ -194,14 +242,20 @@
             </a>
           </li>
         </ul>
+
         <address class="footer__address">
           <a class="footer__contact" href="tel:+380730963644">+38 (073) 096 36 44</a>
           <a class="footer__contact" href="mailto:info@yanki.com">info@yanki.com</a>
         </address>
+
       </div>
+
     </div>
+
     <p class="footer__copyright">&copy; 2021 Yanki. All rights reserved</p>
+
   </footer>
+
 </body>
 
 </html>
