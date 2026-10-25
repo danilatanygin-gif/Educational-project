@@ -20,7 +20,7 @@
   display: block;
   width: 26px;
   height: 4px;
-  background-color: var(--color-light-text, #ffffff);
+  background-color: var(--color-light, #ffffff);
 }
 
 .burger__bar::before,
@@ -29,7 +29,7 @@
   position: absolute;
   left: 0;
   height: 4px;
-  background-color: var(--color-light-text, #ffffff);
+  background-color: var(--color-light, #ffffff);
 }
 
 .burger__bar::before {

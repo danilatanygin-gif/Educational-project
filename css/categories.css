@@ -4,15 +4,14 @@
 }
 
 .categories__title {
-  color: var(--color-dark-text, #252525);
+  color: var(--color-dark, #252525);
   font-weight: var(--font-weight-light, 300);
-  font-size: 36px;
+  font-size: clamp(1.5rem, 1.188rem + 1.49vw, 2.25rem);
 }
 
 .category-card {
   position: relative;
   display: block;
-  max-width: 274px;
 }
 
 .category-card__image {
@@ -22,13 +21,14 @@
 
 .category-card__name {
   position: absolute;
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding-block: 10px;
   bottom: 0;
-  color: var(--color-light-text, #ffffff);
+  display: block;
+  height: auto;
+  width: 100%;
+  padding-block: 4px;
+  text-align: center;
+  color: var(--color-light, #ffffff);
   font-weight: var(--font-weight-light, 300);
-  font-size: 20px;
+  font-size: clamp(1.125rem, 1.073rem + 0.25vw, 1.25rem);
   background-color: var(--color-brown-transparent, #E0BEA2BF);
 }

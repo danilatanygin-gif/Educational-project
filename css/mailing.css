@@ -1,13 +1,15 @@
 .mailing {
+  --mailing-font: clamp(0.875rem, 0.823rem + 0.25vw, 1rem);
+  --mailing-gap: clamp(0.938rem, 0.807rem + 0.62vw, 1.25rem);
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
 .mailing__title {
-  color: var(--color-dark-text, #252525);
+  color: var(--color-dark, #252525);
   font-weight: var(--font-weight-light, 300);
-  font-size: 36px;
+  font-size: clamp(1.5rem, 1.188rem + 1.49vw, 2.25rem);
 }
 
 .mailing__form {
@@ -16,7 +18,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--mailing-gap);
 }
 
 .mailing__label {
@@ -29,12 +31,12 @@
 }
 
 .mailing__input {
-  height: 50px;
+  height: clamp(2.5rem, 2.24rem + 1.24vw, 3.125rem);
   width: 100%;
   text-align: center;
   color: #25252580;
   font-weight: var(--font-weight-light, 300);
-  font-size: 16px;
+  font-size: var(--mailing-font);
   margin: 0;
   padding: 0;
 }
@@ -45,12 +47,12 @@
 }
 
 .mailing__submit {
-  height: 50px;
+  height: clamp(2.5rem, 2.24rem + 1.24vw, 3.125rem);
   width: 100%;
   text-align: center;
-  color: var(--color-light-text, #ffffff);
+  color: var(--color-light, #ffffff);
   font-weight: var(--font-weight-light, 300);
-  font-size: 16px;
+  font-size: var(--mailing-font);
   text-transform: uppercase;
   background-color: var(--color-brown, #E0BEA2);
   border: none;
@@ -59,9 +61,9 @@
 
 .mailing__policy {
   text-align: center;
-  color: var(--color-dark-text, #252525);
+  color: var(--color-dark, #252525);
   font-weight: var(--font-weight-extra-light, 200);
-  font-size: 16px;
+  font-size: var(--mailing-font);
   margin: 0;
   padding: 0;
 }
