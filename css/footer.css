@@ -32,7 +32,6 @@
   align-items: start;
   list-style: none;
   padding: 0;
-  margin: 0;
   gap: 10px;
   margin: 0 0 10px 0;
 }
@@ -50,6 +49,7 @@
   color: var(--color-dark, #252525);
   font-size: clamp(0.875rem, 0.823rem + 0.25vw, 1rem);
   font-weight: var(--font-weight-extra-light, 200);
+  overflow-wrap: anywhere;
 }
 
 .footer__copyright {
@@ -93,14 +93,6 @@
     border-right: 2px solid var(--color-brown, #E0BEA2);
     border-bottom: 2px solid var(--color-brown, #E0BEA2);
     transform: rotate(45deg);
-  }
-
-  /*.footer__nav {
-    display: none;
-  }*/
-
-  .footer__nav--open {
-    display: block;
   }
 
   .footer__address {

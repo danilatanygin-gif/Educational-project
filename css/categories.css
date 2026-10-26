@@ -7,6 +7,7 @@
   color: var(--color-dark, #252525);
   font-weight: var(--font-weight-light, 300);
   font-size: clamp(1.5rem, 1.188rem + 1.49vw, 2.25rem);
+  overflow-wrap: anywhere;
 }
 
 .category-card {
@@ -27,7 +28,7 @@
   width: 100%;
   padding-block: 4px;
   text-align: center;
-  word-break: break-all;
+  overflow-wrap: anywhere;
   color: var(--color-light, #ffffff);
   font-weight: var(--font-weight-light, 300);
   font-size: clamp(1.125rem, 1.073rem + 0.25vw, 1.25rem);

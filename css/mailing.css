@@ -22,15 +22,6 @@
   gap: var(--mailing-gap);
 }
 
-.mailing__label {
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
 .mailing__input {
   height: clamp(2.5rem, 2.24rem + 1.24vw, 3.125rem);
   width: 100%;
@@ -62,6 +53,7 @@
 
 .mailing__policy {
   text-align: center;
+  overflow-wrap: anywhere;
   color: var(--color-dark, #252525);
   font-weight: var(--font-weight-extra-light, 200);
   font-size: var(--mailing-font);

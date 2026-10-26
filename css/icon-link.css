@@ -4,8 +4,8 @@
 }
 
 .icon-link__image--header {
-  width: clamp(1.25rem, 1.12rem + 0.62vw, 1.563rem);
-  height: clamp(1.25rem, 1.12rem + 0.62vw, 1.563rem);
+  width: clamp(1.25rem, 1.133rem + 0.6vw, 1.563rem);
+  height: clamp(1.25rem, 1.133rem + 0.6vw, 1.563rem);
 }
 
 .icon-link:hover,

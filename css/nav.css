@@ -21,6 +21,7 @@
 .nav__item {
   display: flex;
   align-items: start;
+  overflow-wrap: break-word;
 }
 
 .nav__link {
@@ -37,7 +38,7 @@
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--color-light, #ffffff);
-  font-size: clamp(1rem, 0.948rem + 0.25vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.782rem + 0.48vw, 1.125rem);
   font-weight: var(--font-weight-light, 300);
 }
 

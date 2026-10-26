@@ -15,6 +15,7 @@
   font-weight: var(--font-weight-light, 300);
   color: var(--color-light, #ffffff);
   margin-bottom: 40px;
+  overflow-wrap: anywhere;
 }
 
 .hero__title::after {

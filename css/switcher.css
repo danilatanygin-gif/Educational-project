@@ -7,7 +7,7 @@
 .switcher__item {
   display: none;
   height: 21px;
-  font-size: clamp(1rem, 0.948rem + 0.25vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.782rem + 0.48vw, 1.125rem);
   font-weight: var(--font-weight-light, 300);
   color: var(--color-light, #ffffff);
   text-transform: uppercase;
