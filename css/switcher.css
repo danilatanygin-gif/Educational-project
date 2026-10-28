@@ -7,9 +7,9 @@
 .switcher__item {
   display: none;
   height: 21px;
-  font-size: 18px;
+  font-size: clamp(0.875rem, 0.782rem + 0.48vw, 1.125rem);
   font-weight: var(--font-weight-light, 300);
-  color: var(--color-light-text, #ffffff);
+  color: var(--color-light, #ffffff);
   text-transform: uppercase;
   text-decoration: none;
   padding: 0;
@@ -19,28 +19,21 @@
 
 .switcher__item--active {
   display: flex;
+  padding: 0 20px 0 0;
   position: relative;
   cursor: pointer;
+  transition: scale var(--transition-fast, 0.2s);
 }
 
-.switcher__item--active:hover {
+.switcher__item--active:hover,
+.switcher__item--active:focus-visible {
   scale: 1.1;
-  transition: 0.2s;
-}
-
-.switcher__item--active::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -28px;
-  width: 28px;
-  height: 100%;
 }
 
 .switcher__item--active::before {
   position: absolute;
   top: 4px;
-  right: -14px;
+  right: 4px;
   content: "";
   display: inline-block;
   width: 8px;

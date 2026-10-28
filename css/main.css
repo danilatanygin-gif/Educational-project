@@ -1,6 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: clamp(3.75rem, 2.71rem + 4.97vw, 6.25rem);
   margin: 0 0 40px 0;
 }

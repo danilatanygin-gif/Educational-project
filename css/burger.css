@@ -2,25 +2,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 24px;
+  width: clamp(1.875rem, 1.782rem + 0.48vw, 2.125rem);
+  height: clamp(1.25rem, 1.157rem + 0.48vw, 1.5rem);
   padding: 0;
   border: 0;
   background: none;
   cursor: pointer;
+  transition: scale var(--transition-fast, 0.2s);
 }
 
-.burger:hover {
+.burger:hover,
+.burger:focus-visible {
   scale: 1.1;
-  transition: 0.2s;
 }
 
 .burger__bar {
   position: relative;
   display: block;
-  width: 26px;
+  width: clamp(1.375rem, 1.282rem + 0.48vw, 1.625rem);
   height: 4px;
-  background-color: var(--color-light-text, #ffffff);
+  background-color: var(--color-light, #ffffff);
 }
 
 .burger__bar::before,
@@ -29,15 +30,15 @@
   position: absolute;
   left: 0;
   height: 4px;
-  background-color: var(--color-light-text, #ffffff);
+  background-color: var(--color-light, #ffffff);
 }
 
 .burger__bar::before {
-  top: -10px;
-  width: 34px;
+  top: clamp(-0.625rem, -0.672rem + 0.24vw, -0.5rem);
+  width: clamp(1.875rem, 1.782rem + 0.48vw, 2.125rem);
 }
 
 .burger__bar::after {
-  bottom: -10px;
-  width: 18px;
+  bottom: clamp(-0.625rem, -0.672rem + 0.24vw, -0.5rem);
+  width: clamp(0.875rem, 0.782rem + 0.48vw, 1.125rem);
 }

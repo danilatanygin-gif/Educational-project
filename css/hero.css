@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,10 +11,11 @@
 
 .hero__title {
   position: relative;
-  font-size: 46px;
+  font-size: clamp(2rem, 1.692rem + 1.31vw, 2.875rem);
   font-weight: var(--font-weight-light, 300);
-  color: var(--color-light-text, #ffffff);
+  color: var(--color-light, #ffffff);
   margin-bottom: 40px;
+  overflow-wrap: anywhere;
 }
 
 .hero__title::after {
@@ -25,16 +26,16 @@
   transform: translateX(-50%);
   width: 120px;
   height: 1px;
-  background-color: var(--color-light-text, #ffffff);
+  background-color: var(--color-light, #ffffff);
 }
 
 .hero__link {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
   font-weight: var(--font-weight-light, 300);
   text-transform: uppercase;
-  color: var(--color-light-text, #ffffff);
+  color: var(--color-light, #ffffff);
   text-align: center;
   max-width: 600px;
 }

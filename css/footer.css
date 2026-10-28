@@ -1,26 +1,30 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.footer__inner {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr auto;
+  row-gap: clamp(1.875rem, 1.355rem + 2.48vw, 3.125rem);
 }
 
 .footer__column {
   display: flex;
   align-items: start;
   flex-direction: column;
-  width: 250px;
 }
 
 .footer__title {
-  color: var(--color-dark-text, #252525);
+  color: var(--color-dark, #252525);
   font-weight: var(--font-weight-light, 300);
-  font-size: 20px;
+  font-size: clamp(1.125rem, 1.073rem + 0.25vw, 1.25rem);
   text-transform: uppercase;
+}
+
+.footer__toggle {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
 }
 
 .footer__social {
@@ -28,7 +32,6 @@
   align-items: start;
   list-style: none;
   padding: 0;
-  margin: 0;
   gap: 10px;
   margin: 0 0 10px 0;
 }
@@ -43,15 +46,56 @@
 
 .footer__contact {
   font-style: normal;
-  color: var(--color-dark-text, #252525);
-  font-size: 16px;
+  color: var(--color-dark, #252525);
+  font-size: clamp(0.875rem, 0.823rem + 0.25vw, 1rem);
   font-weight: var(--font-weight-extra-light, 200);
+  overflow-wrap: anywhere;
 }
 
 .footer__copyright {
+  grid-column: 1/-1;
   width: 100%;
   text-align: center;
-  color: var(--color-dark-text, #252525);
-  font-size: 12px;
+  color: var(--color-dark, #252525);
+  font-size: clamp(0.625rem, 0.573rem + 0.25vw, 0.75rem);
   font-weight: var(--font-weight-light, 300);
+}
+
+@media (max-width:768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer__column {
+    align-items: center;
+  }
+
+  .footer__title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer__toggle {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid var(--color-dark);
+    text-align: center;
+  }
+
+  .footer__toggle::after {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--color-brown, #E0BEA2);
+    border-bottom: 2px solid var(--color-brown, #E0BEA2);
+    transform: rotate(45deg);
+  }
+
+  .footer__address {
+    align-items: center;
+  }
 }
