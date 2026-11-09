@@ -19,42 +19,52 @@
           <span class="burger__bar"></span>
         </button>
 
-        <nav
-          class="site-header__nav site-header__nav--primary nav"
-          aria-label="Основная навигация"
-        >
+        <nav class="site-header__nav nav" aria-label="Основная навигация">
           <ul class="nav__list nav__list--horizontal">
-            <li class="nav__item">
+            <li class="nav__item nav__item--burger-mobile">
+              <a class="nav__link nav__link--light" href="account.html">
+                <img
+                  class="icon-link__image--header"
+                  src="assets/images/actions_icons/Coffe-person.svg"
+                  width="25"
+                  height="25"
+                  alt=""
+                />
+                Личный кабинет</a
+              >
+            </li>
+
+            <li class="nav__item nav__item--desktop nav__item--burger-mobile">
               <a class="nav__link nav__link--light" href="new.html">NEW</a>
             </li>
-            <li class="nav__item">
+
+            <li class="nav__item nav__item--desktop nav__item--burger-mobile">
               <a class="nav__link nav__link--light" href="catalog.html"
                 >Каталог</a
               >
             </li>
-            <li class="nav__item">
+
+            <li class="nav__item nav__item--desktop nav__item--burger-mobile">
               <a class="nav__link nav__link--light" href="about.html">О нас</a>
             </li>
-          </ul>
-        </nav>
 
-        <nav
-          class="site-header__nav site-header__nav--secondary nav"
-          aria-label="Вторичная навигация"
-          hidden
-        >
-          <ul class="nav__list nav__list--horizontal">
-            <li class="nav__item">
+            <li class="nav__item nav__item--burger-desktop">
               <a class="nav__link nav__link--light" href="new.html">
                 Оплата и доставка</a
               >
             </li>
-            <li class="nav__item">
+
+            <li
+              class="nav__item nav__item--burger-desktop nav__item--burger-mobile"
+            >
               <a class="nav__link nav__link--light" href="new.html">
                 Условия возврата</a
               >
             </li>
-            <li class="nav__item">
+
+            <li
+              class="nav__item nav__item--burger-desktop nav__item--burger-mobile"
+            >
               <a class="nav__link nav__link--light" href="new.html">
                 Контакты</a
               >
@@ -165,6 +175,104 @@
             />
           </a>
         </div>
+
+        <div class="site-header__actions--mobile-burger">
+          <form
+            class="site-header__search-input"
+            action="search.html"
+            role="search"
+            method="get"
+          >
+            <label class="search__label visual-hidden" for="search-input"
+              >>Поиск по сайту</label
+            >
+            <div class="search__inner">
+              <input
+                class="search__input"
+                type="search"
+                id="search-input"
+                name="q"
+                placeholder="Введите ваш запрос"
+                autocomplete="email"
+                required
+                aria-describedby="mailing-policy"
+              />
+
+              <button class="search__submit" type="submit">
+                <img
+                  class="icon-link__image--header"
+                  src="assets/images/actions_icons/Search-black.svg"
+                  width="25"
+                  height="25"
+                  alt=""
+                />
+              </button>
+            </div>
+          </form>
+
+          <div class="site-header__locale site-header__locale--mobile-only">
+            <div
+              class="switcher site-header__currency site-header__currency--mobile-only"
+              role="group"
+              aria-label="Выбор валюты"
+            >
+              <button
+                class="switcher__item switcher__item--active"
+                type="button"
+              >
+                UAH
+              </button>
+              <button class="switcher__item" type="button">USD</button>
+              <button class="switcher__item" type="button">EUR</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-header__contacts">
+          <ul class="footer__social">
+            <li>
+              <a
+                class="icon-link"
+                href="https://www.instagram.com/yanki/"
+                aria-label="Instagram"
+              >
+                <img
+                  class="icon-link__image"
+                  src="assets/images/footer/instagram.svg"
+                  width="19"
+                  height="19"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                class="icon-link"
+                href="https://t.me/yanki"
+                aria-label="Telegram"
+              >
+                <img
+                  class="icon-link__image"
+                  src="assets/images/footer/telegram.svg"
+                  width="19"
+                  height="19"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+
+          <address class="footer__address">
+            <a class="footer__contact" href="tel:+380730963644"
+              >+38 (073) 096 36 44</a
+            >
+            <a class="footer__contact" href="mailto:info@yanki.com"
+              >info@yanki.com</a
+            >
+          </address>
+        </div>
+
+        <div class="site-header__bg-plug"></div>
       </div>
     </header>
 

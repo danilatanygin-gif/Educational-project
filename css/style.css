@@ -10,6 +10,8 @@
 @import './nav.css';
 /*Подключение стилей для блока switcher*/
 @import './switcher.css';
+/*Подключение стилей для блока search-input*/
+@import './search.css';
 /*Подключение стилей для header*/
 @import './header.css';
 /*Подключаем стилей main*/
