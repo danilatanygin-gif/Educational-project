@@ -1,17 +1,32 @@
 .site-header {
-  position: absolute;
-  top: 0;
+  position: sticky;
+  width: calc(100% - 0 clamp(0.5rem, 0.453rem + 0.24vw, 0.625rem) 0);
+  margin: 0 clamp(0.5rem, 0.453rem + 0.24vw, 0.625rem) 0;
+  top: 10px;
   left: 0;
-  width: 100%;
   z-index: 20;
+  height: 0;
+  overflow: visible;
 }
 
 .site-header__inner {
   display: grid;
+  min-height: 90px;
   grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
   align-items: center;
   column-gap: var(--header-gap, 25px);
-  padding-block: 25px;
+  padding-block: 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.site-header__inner[data-menu-open="true"] {
+  grid-template-columns: 60px 1fr;
+}
+
+.site-header__inner--is-scrolled {
+  background-color: rgba(37, 37, 37, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .site-header__logo {
@@ -42,9 +57,9 @@
   gap: clamp(0.625rem, 0.105rem + 2.48vw, 1.875rem);
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .site-header__inner {
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1.5fr 0.5fr 1fr;
   }
 
   .site-header__burger,
@@ -52,6 +67,13 @@
   .site-header__logo,
   .site-header__actions {
     grid-row: 1;
+  }
+
+  .site-header__nav,
+  .site-header__currency,
+  .icon-link--search,
+  .icon-link--person {
+    display: none;
   }
 
   .site-header__burger {
@@ -70,5 +92,26 @@
   .site-header__actions {
     grid-column: 5;
     justify-content: end;
+  }
+
+  .site-header__inner[data-menu-open="true"] {
+    grid-template-columns: 0.5fr 1fr 1.5fr 0.5fr 1fr;
+    grid-template-rows: repeat(8, 90px) 1fr;
+    height: 100vh;
+    background: black;
+    border-radius: 0;
+  }
+  .site-header__inner[data-menu-open="true"] .site-header {
+    width: 100%;
+    top: 0;
+    margin: 0;
+  }
+
+  .site-header__inner[data-menu-open="true"] .site-header__nav,
+  .site-header__inner[data-menu-open="true"] .site-header__currency,
+  .site-header__inner[data-menu-open="true"] .icon-link--search,
+  .site-header__inner[data-menu-open="true"] .icon-link--person {
+    display: flex;
+    grid-row: 2;
   }
 }
