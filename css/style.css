@@ -28,3 +28,5 @@
 @import './footer.css';
 /*Подключение стилей для блока icon-link*/
 @import './icon-link.css';
+/*Подключение стилей для блока scroll-top*/
+@import './scroll-top.css';

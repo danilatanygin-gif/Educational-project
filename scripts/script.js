@@ -1,22 +1,21 @@
 const header = document.querySelector(".site-header__inner");
 
-(function handleBurger() {
+const handleBurger = () => {
   const burgerBtn = document.querySelector(".burger");
+  if (!burgerBtn || !header) return;
 
-  if (burgerBtn) {
-    burgerBtn.addEventListener("click", () => {
-      const isOpen = header.dataset.menuOpen !== "true";
-      header.dataset.menuOpen = String(isOpen);
-      burgerBtn.setAttribute("aria-expanded", String(isOpen));
-      burgerBtn.setAttribute(
-        "aria-label",
-        isOpen ? "Открыть меню" : "Закрыть меню",
-      );
-    });
-  }
-})();
+  burgerBtn.addEventListener("click", () => {
+    const isOpen = header.dataset.menuOpen !== "true";
+    header.dataset.menuOpen = String(isOpen);
+    burgerBtn.setAttribute("aria-expanded", String(isOpen));
+    burgerBtn.setAttribute(
+      "aria-label",
+      isOpen ? "Закрыть меню" : "Открыть меню",
+    );
+  });
+};
 
-(function handleHeaderScroll(){
+const handleHeaderScroll = () => {
   const firstBlock = document.querySelector(".hero");
 
   if (header && firstBlock) {
@@ -37,4 +36,24 @@ const header = document.querySelector(".site-header__inner");
 
     observer.observe(firstBlock);
   }
-})();
+};
+
+const handleScrollTop = () => {
+  const scrollTopBtn = document.querySelector(".scroll-top");
+
+  if (!scrollTopBtn) {
+    return;
+  }
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", () => {
+    scrollTopBtn.classList.toggle("scroll-top--visible", window.scrollY > 400);
+  });
+};
+
+handleBurger();
+handleHeaderScroll();
+handleScrollTop();
