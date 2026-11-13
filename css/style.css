@@ -10,6 +10,8 @@
 @import './nav.css';
 /*Подключение стилей для блока switcher*/
 @import './switcher.css';
+/*Подключение стилей для блока search-input*/
+@import './search.css';
 /*Подключение стилей для header*/
 @import './header.css';
 /*Подключаем стилей main*/
@@ -26,3 +28,5 @@
 @import './footer.css';
 /*Подключение стилей для блока icon-link*/
 @import './icon-link.css';
+/*Подключение стилей для блока scroll-top*/
+@import './scroll-top.css';
