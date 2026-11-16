@@ -42,3 +42,23 @@
   bottom: clamp(-0.625rem, -0.672rem + 0.24vw, -0.5rem);
   width: clamp(0.875rem, 0.782rem + 0.48vw, 1.125rem);
 }
+
+.burger[aria-expanded="true"] .burger__bar {
+  background-color: transparent;
+}
+
+.burger[aria-expanded="true"] .burger__bar::before,
+.burger[aria-expanded="true"] .burger__bar::after {
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  transition: rotate var(--transition-fast, 0.2s);
+}
+
+.burger[aria-expanded="true"] .burger__bar::before {
+  rotate: 45deg;
+}
+
+.burger[aria-expanded="true"] .burger__bar::after {
+  rotate: -45deg;
+}

@@ -1,254 +1,541 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YANKI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YANKI</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body class="page">
+    <header class="site-header">
+      <div class="site-header__inner container" data-menu-open="false">
+        <button
+          class="burger site-header__burger open-burger"
+          type="button"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span class="burger__bar"></span>
+        </button>
 
-<body class="page">
+        <nav class="site-header__nav nav" aria-label="Основная навигация">
+          <ul class="nav__list nav__list--horizontal">
+            <li class="nav__item nav__item--burger-mobile">
+              <a class="nav__link nav__link--light" href="account.html">
+                <img
+                  class="icon-link__image--header"
+                  src="assets/images/actions_icons/Coffe-person.svg"
+                  width="25"
+                  height="25"
+                  alt=""
+                />
+                Личный кабинет</a
+              >
+            </li>
 
-  <header class="site-header">
+            <li class="nav__item nav__item--desktop nav__item--burger-mobile">
+              <a class="nav__link nav__link--light" href="new.html">NEW</a>
+            </li>
 
-    <div class="site-header__inner container">
+            <li class="nav__item nav__item--desktop nav__item--burger-mobile">
+              <a class="nav__link nav__link--light" href="catalog.html"
+                >Каталог</a
+              >
+            </li>
 
-      <button class="burger site-header__burger js-burger" type="button" aria-expanded="false"
-        aria-label="Открыть меню">
-        <span class="burger__bar"></span>
-      </button>
+            <li class="nav__item nav__item--desktop nav__item--burger-mobile">
+              <a class="nav__link nav__link--light" href="about.html">О нас</a>
+            </li>
 
-      <nav class="site-header__nav nav" aria-label="Основная навигация">
-        <ul class="nav__list nav__list--horizontal">
-          <li class="nav__item">
-            <a class="nav__link nav__link--light" href="new.html">NEW</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--light" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--light" href="about.html">О нас</a>
-          </li>
-        </ul>
-      </nav>
+            <li class="nav__item nav__item--burger-desktop">
+              <a class="nav__link nav__link--light" href="new.html">
+                Оплата и доставка</a
+              >
+            </li>
 
+            <li
+              class="nav__item nav__item--burger-desktop nav__item--burger-mobile"
+            >
+              <a class="nav__link nav__link--light" href="new.html">
+                Условия возврата</a
+              >
+            </li>
 
-      <a class="logo site-header__logo" href="index.html" aria-label="YANKI" aria-current="page">
-        <img class="logo__image" src="assets/images/YANKI.svg" alt="" width="160" height="40">
-      </a>
+            <li
+              class="nav__item nav__item--burger-desktop nav__item--burger-mobile"
+            >
+              <a class="nav__link nav__link--light" href="new.html">
+                Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-      <div class="site-header__locale">
-        <div class="switcher site-header__language" role="group" aria-label="Выбор языка">
-          <button class="switcher__item switcher__item--active" type="button" aria-current="true" lang="ru">RU</button>
-          <a class="switcher__item" href="uk.html" lang="uk">UK</a>
-          <a class="switcher__item" href="en.html" lang="en">EN</a>
+        <a
+          class="logo site-header__logo"
+          href="index.html"
+          aria-label="YANKI"
+          aria-current="page"
+        >
+          <img
+            class="logo__image"
+            src="assets/images/YANKI.svg"
+            alt=""
+            width="160"
+            height="40"
+          />
+        </a>
+
+        <div class="site-header__locale">
+          <div
+            class="switcher site-header__language"
+            role="group"
+            aria-label="Выбор языка"
+          >
+            <button
+              class="switcher__item switcher__item--active"
+              type="button"
+              aria-current="true"
+              lang="ru"
+            >
+              RU
+            </button>
+            <a class="switcher__item" href="uk.html" lang="uk">UK</a>
+            <a class="switcher__item" href="en.html" lang="en">EN</a>
+          </div>
+
+          <div
+            class="switcher site-header__currency"
+            role="group"
+            aria-label="Выбор валюты"
+          >
+            <button class="switcher__item switcher__item--active" type="button">
+              UAH
+            </button>
+            <button class="switcher__item" type="button">USD</button>
+            <button class="switcher__item" type="button">EUR</button>
+          </div>
         </div>
 
-        <div class="switcher site-header__currency" role="group" aria-label="Выбор валюты">
-          <button class="switcher__item switcher__item--active" type="button">UAH</button>
-          <button class="switcher__item" type="button">USD</button>
-          <button class="switcher__item" type="button">EUR</button>
+        <div class="site-header__actions">
+          <a
+            class="icon-link icon-link--search"
+            href="search.html"
+            aria-label="Поиск"
+          >
+            <img
+              class="icon-link__image--header"
+              src="assets/images/actions_icons/Search.svg"
+              width="25"
+              height="25"
+              alt=""
+            />
+          </a>
+
+          <a
+            class="icon-link icon-link--person"
+            href="account.html"
+            aria-label="Личный кабинет"
+          >
+            <img
+              class="icon-link__image--header"
+              src="assets/images/actions_icons/Person.svg"
+              width="25"
+              height="25"
+              alt=""
+            />
+          </a>
+
+          <a
+            class="icon-link icon-link--heart"
+            href="favorites.html"
+            aria-label="Избранное"
+          >
+            <img
+              class="icon-link__image--header"
+              src="assets/images/actions_icons/Heart.svg"
+              width="25"
+              height="25"
+              alt=""
+            />
+          </a>
+
+          <a
+            class="icon-link icon-link--basket"
+            href="cart.html"
+            aria-label="Корзина"
+          >
+            <img
+              class="icon-link__image--header"
+              src="assets/images/actions_icons/Basket.svg"
+              width="25"
+              height="25"
+              alt=""
+            />
+          </a>
         </div>
+
+        <div class="site-header__actions--mobile-burger">
+          <form
+            class="site-header__search-input"
+            action="search.html"
+            role="search"
+            method="get"
+          >
+            <label class="search__label visual-hidden" for="search-input"
+              >Поиск по сайту</label
+            >
+            <div class="search__inner">
+              <input
+                class="search__input"
+                type="search"
+                id="search-input"
+                name="q"
+                placeholder="Введите ваш запрос"
+                required
+              />
+
+              <button class="search__submit" type="submit">
+                <img
+                  class="icon-link__image--header"
+                  src="assets/images/actions_icons/Search-black.svg"
+                  width="25"
+                  height="25"
+                  alt=""
+                />
+              </button>
+            </div>
+          </form>
+
+          <div class="site-header__locale site-header__locale--mobile-only">
+            <div
+              class="switcher site-header__currency site-header__currency--mobile-only"
+              role="group"
+              aria-label="Выбор валюты"
+            >
+              <button
+                class="switcher__item switcher__item--active"
+                type="button"
+              >
+                UAH
+              </button>
+              <button class="switcher__item" type="button">USD</button>
+              <button class="switcher__item" type="button">EUR</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-header__contacts">
+          <ul class="footer__social">
+            <li>
+              <a
+                class="icon-link"
+                href="https://www.instagram.com/yanki/"
+                aria-label="Instagram"
+              >
+                <img
+                  class="icon-link__image"
+                  src="assets/images/footer/instagram.svg"
+                  width="19"
+                  height="19"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                class="icon-link"
+                href="https://t.me/yanki"
+                aria-label="Telegram"
+              >
+                <img
+                  class="icon-link__image"
+                  src="assets/images/footer/telegram.svg"
+                  width="19"
+                  height="19"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+
+          <address class="footer__address">
+            <a class="footer__contact" href="tel:+380730963644"
+              >+38 (073) 096 36 44</a
+            >
+            <a class="footer__contact" href="mailto:info@yanki.com"
+              >info@yanki.com</a
+            >
+          </address>
+        </div>
+
+        <div class="site-header__bg-plug"></div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 class="hero__title" id="hero-title">Новая коллекция</h1>
+
+        <a class="hero__link" href="new.html"> Смотреть новинки </a>
+      </section>
+
+      <section class="categories container" aria-labelledby="categories-title">
+        <h2 class="categories__title" id="categories-title">Категории</h2>
+
+        <div
+          class="carousel categories__carousel js-carousel"
+          role="region"
+          aria-roledescription="карусель"
+          aria-label="Категории"
+        >
+          <ul class="carousel__list" id="categories-list">
+            <li class="carousel__item">
+              <a class="category-card" href="jackets.html">
+                <img
+                  class="category-card__image"
+                  src="assets/images/carousel/Jackets.jpg"
+                  width="274"
+                  height="450"
+                  alt=""
+                />
+                <span class="category-card__name">Куртки</span>
+              </a>
+            </li>
+            <li class="carousel__item">
+              <a class="category-card" href="coats.html">
+                <img
+                  class="category-card__image"
+                  src="assets/images/carousel/Coats.jpg"
+                  width="274"
+                  height="450"
+                  alt=""
+                />
+                <span class="category-card__name">Пальто</span>
+              </a>
+            </li>
+            <li class="carousel__item">
+              <a class="category-card" href="fur-coats.html">
+                <img
+                  class="category-card__image"
+                  src="assets/images/carousel/Fur-coats.jpg"
+                  width="274"
+                  height="450"
+                  alt=""
+                />
+                <span class="category-card__name">Шубы</span>
+              </a>
+            </li>
+            <li class="carousel__item">
+              <a class="category-card" href="parks.html">
+                <img
+                  class="category-card__image"
+                  src="assets/images/carousel/Parks.jpg"
+                  width="274"
+                  height="450"
+                  alt=""
+                />
+                <span class="category-card__name">Парки</span>
+              </a>
+            </li>
+          </ul>
+
+          <button
+            class="carousel__button carousel__button--next"
+            type="button"
+            aria-label="Следующие категории"
+            aria-controls="categories-list"
+          ></button>
+        </div>
+      </section>
+
+      <section class="mailing container" aria-labelledby="mailing-title">
+        <h2 class="mailing__title" id="mailing-title">
+          Узнайте первым о новинках
+        </h2>
+
+        <form class="mailing__form" action="#" method="post">
+          <label class="mailing__label visual-hidden" for="mailing-email"
+            >Ваш e-mail</label
+          >
+          <input
+            class="mailing__input"
+            type="email"
+            id="mailing-email"
+            name="email"
+            placeholder="Ваш e-mail*"
+            autocomplete="email"
+            required
+            aria-describedby="mailing-policy"
+          />
+          <button class="mailing__submit" type="submit">Подписаться</button>
+          <p class="mailing__policy" id="mailing-policy">
+            Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих
+            персональных данных и ознакомлен(-а) с
+            <a class="mailing__link" href="privacy.html"
+              >условиями конфиденциальности</a
+            >.
+          </p>
+          <p class="mailing__message" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__column">
+        <h2 class="footer__title">
+          <button
+            class="footer__toggle"
+            id="company-title"
+            type="button"
+            aria-controls="company-nav"
+          >
+            Компания
+          </button>
+        </h2>
+
+        <nav
+          class="nav footer__nav"
+          id="company-nav"
+          aria-labelledby="company-title"
+        >
+          <ul class="nav__list nav__list--vertical nav__list--centered">
+            <li class="nav__item">
+              <a class="nav__link nav__link--dark" href="about.html">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--dark" href="contacts.html"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="site-header__actions">
-        <a class="icon-link icon-link--search" href="search.html" aria-label="Поиск">
-          <img class="icon-link__image--header" src="assets/images/actions_icons/Search.svg" width="25" height="25"
-            alt="">
-        </a>
+      <div class="footer__column">
+        <h2 class="footer__title">
+          <button
+            class="footer__toggle"
+            id="useful-title"
+            type="button"
+            aria-controls="useful-nav"
+          >
+            Полезное
+          </button>
+        </h2>
 
-        <a class="icon-link icon-link--person" href="account.html" aria-label="Личный кабинет">
-          <img class="icon-link__image--header" src="assets/images/actions_icons/Person.svg" width="25" height="25"
-            alt="">
-        </a>
-
-        <a class="icon-link icon-link--heart" href="favorites.html" aria-label="Избранное">
-          <img class="icon-link__image--header" src="assets/images/actions_icons/Heart.svg" width="25" height="25"
-            alt="">
-        </a>
-
-        <a class="icon-link icon-link--basket" href="cart.html" aria-label="Корзина">
-          <img class="icon-link__image--header" src="assets/images/actions_icons/Basket.svg" width="25" height="25"
-            alt="">
-        </a>
+        <nav
+          class="nav footer__nav"
+          id="useful-nav"
+          aria-labelledby="useful-title"
+        >
+          <ul class="nav__list nav__list--vertical nav__list--centered">
+            <li class="nav__item">
+              <a class="nav__link nav__link--dark" href="payment.html"
+                >Оплата и доставка</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--dark" href="returns.html"
+                >Условия возврата</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--dark" href="bonus.html"
+                >Бонусная система</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
 
-    </div>
+      <div class="footer__column">
+        <h2 class="footer__title">
+          <button
+            class="footer__toggle"
+            id="customer-title"
+            type="button"
+            aria-controls="customer-nav"
+          >
+            Покупателю
+          </button>
+        </h2>
 
-  </header>
-
-
-  <main class="main">
-
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 class="hero__title" id="hero-title">Новая коллекция</h1>
-
-      <a class="hero__link" href="new.html">
-        Смотреть новинки
-      </a>
-
-    </section>
-
-    <section class="categories container" aria-labelledby="categories-title">
-      <h2 class="categories__title" id="categories-title">Категории</h2>
-
-      <div class="carousel categories__carousel js-carousel" role="region" aria-roledescription="карусель"
-        aria-label="Категории">
-
-        <ul class="carousel__list" id="categories-list">
-          <li class="carousel__item">
-            <a class="category-card" href="jackets.html">
-              <img class="category-card__image" src="assets/images/carousel/Jackets.jpg" width="274" height="450"
-                alt="">
-              <span class="category-card__name">Куртки</span>
-            </a>
-          </li>
-          <li class="carousel__item">
-            <a class="category-card" href="coats.html">
-              <img class="category-card__image" src="assets/images/carousel/Coats.jpg" width="274" height="450" alt="">
-              <span class="category-card__name">Пальто</span>
-            </a>
-          </li>
-          <li class="carousel__item">
-            <a class="category-card" href="fur-coats.html">
-              <img class="category-card__image" src="assets/images/carousel/Fur-coats.jpg" width="274" height="450"
-                alt="">
-              <span class="category-card__name">Шубы</span>
-            </a>
-          </li>
-          <li class="carousel__item">
-            <a class="category-card" href="parks.html">
-              <img class="category-card__image" src="assets/images/carousel/Parks.jpg" width="274" height="450" alt="">
-              <span class="category-card__name">Парки</span>
-            </a>
-          </li>
-        </ul>
-
-        <button class="carousel__button carousel__button--next" type="button" aria-label="Следующие категории"
-          aria-controls="categories-list"></button>
-
+        <nav
+          class="nav footer__nav"
+          id="customer-nav"
+          aria-labelledby="customer-title"
+        >
+          <ul class="nav__list nav__list--vertical nav__list--centered">
+            <li class="nav__item">
+              <a class="nav__link nav__link--dark" href="favorites.html"
+                >Избранное</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--dark" href="offer.html"
+                >Публичная оферта</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--dark" href="privacy.html"
+                >Политика конфиденциальности</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
 
-    </section>
+      <div class="footer__column">
+        <h2 class="footer__title">Контакты</h2>
 
-    <section class="mailing container" aria-labelledby="mailing-title">
-      <h2 class="mailing__title" id="mailing-title">Узнайте первым о новинках</h2>
-
-      <form class="mailing__form" action="#" method="post">
-        <label class="mailing__label visual-hidden " for="mailing-email">Ваш e-mail</label>
-        <input class="mailing__input" type="email" id="mailing-email" name="email" placeholder="Ваш e-mail*"
-          autocomplete="email" required aria-describedby="mailing-policy">
-        <button class="mailing__submit" type="submit">Подписаться</button>
-        <p class="mailing__policy" id="mailing-policy">Нажимая на кнопку «Подписаться», я соглашаюсь на
-          обработку моих персональных
-          данных и
-          ознакомлен(-а) с
-          <a class="mailing__link" href="privacy.html">условиями конфиденциальности</a>.
-        </p>
-        <p class="mailing__message" role="status"></p>
-      </form>
-
-    </section>
-
-  </main>
-
-
-  <footer class="footer container">
-
-    <div class="footer__column">
-      <h2 class="footer__title">
-        <button class="footer__toggle" id="company-title" type="button" aria-controls="company-nav">
-          Компания
-        </button>
-      </h2>
-
-      <nav class="nav footer__nav" id="company-nav" aria-labelledby="company-title">
-        <ul class="nav__list nav__list--vertical nav__list--centered">
-          <li class="nav__item">
-            <a class="nav__link nav__link--dark" href="about.html">О нас</a>
+        <ul class="footer__social">
+          <li>
+            <a
+              class="icon-link"
+              href="https://www.instagram.com/yanki/"
+              aria-label="Instagram"
+            >
+              <img
+                class="icon-link__image"
+                src="assets/images/footer/instagram.svg"
+                width="19"
+                height="19"
+                alt=""
+              />
+            </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--dark" href="contacts.html">Контакты</a>
+          <li>
+            <a
+              class="icon-link"
+              href="https://t.me/yanki"
+              aria-label="Telegram"
+            >
+              <img
+                class="icon-link__image"
+                src="assets/images/footer/telegram.svg"
+                width="19"
+                height="19"
+                alt=""
+              />
+            </a>
           </li>
         </ul>
-      </nav>
 
-    </div>
+        <address class="footer__address">
+          <a class="footer__contact" href="tel:+380730963644"
+            >+38 (073) 096 36 44</a
+          >
+          <a class="footer__contact" href="mailto:info@yanki.com"
+            >info@yanki.com</a
+          >
+        </address>
+      </div>
 
-    <div class="footer__column">
-      <h2 class="footer__title">
-        <button class="footer__toggle" id="useful-title" type="button" aria-controls="useful-nav">
-          Полезное
-        </button>
-      </h2>
-
-      <nav class="nav footer__nav" id="useful-nav" aria-labelledby="useful-title">
-        <ul class="nav__list nav__list--vertical nav__list--centered">
-          <li class="nav__item">
-            <a class="nav__link nav__link--dark" href="payment.html">Оплата и доставка</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--dark" href="returns.html">Условия возврата</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--dark" href="bonus.html">Бонусная система</a>
-          </li>
-        </ul>
-      </nav>
-
-    </div>
-
-    <div class="footer__column">
-      <h2 class="footer__title">
-        <button class="footer__toggle" id="customer-title" type="button" aria-controls="customer-nav">
-          Покупателю
-        </button>
-      </h2>
-
-      <nav class="nav footer__nav" id="customer-nav" aria-labelledby="customer-title">
-        <ul class="nav__list nav__list--vertical nav__list--centered">
-          <li class="nav__item">
-            <a class="nav__link nav__link--dark" href="favorites.html">Избранное</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--dark" href="offer.html">Публичная оферта</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--dark" href="privacy.html">Политика конфиденциальности</a>
-          </li>
-        </ul>
-      </nav>
-
-    </div>
-
-    <div class="footer__column">
-      <h2 class="footer__title">Контакты</h2>
-
-      <ul class="footer__social">
-        <li>
-          <a class="icon-link" href="https://www.instagram.com/yanki/" aria-label="Instagram">
-            <img class="icon-link__image" src="assets/images/footer/instagram.svg" width="19" height="19" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="icon-link" href="https://t.me/yanki" aria-label="Telegram">
-            <img class="icon-link__image" src="assets/images/footer/telegram.svg" width="19" height="19" alt="">
-          </a>
-        </li>
-      </ul>
-
-      <address class="footer__address">
-        <a class="footer__contact" href="tel:+380730963644">+38 (073) 096 36 44</a>
-        <a class="footer__contact" href="mailto:info@yanki.com">info@yanki.com</a>
-      </address>
-
-    </div>
-
-    <p class="footer__copyright">&copy; 2021 Yanki. All rights reserved</p>
-
-  </footer>
-
-</body>
-
+      <p class="footer__copyright">&copy; 2021 Yanki. All rights reserved</p>
+    </footer>
+    <button class="scroll-top" type="button" aria-label="Наверх"></button>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>

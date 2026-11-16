@@ -1,8 +1,8 @@
 :root {
   --color-dark: #252525;
   --color-light: #ffffff;
-  --color-brown: #E0BEA2;
-  --color-brown-transparent: #E0BEA2BF;
+  --color-brown: #e0bea2;
+  --color-brown-transparent: #e0bea2bf;
   --font-weight-extra-light: 200;
   --font-weight-light: 300;
   --header-gap: clamp(0.625rem, 0.105rem + 2.48vw, 1.875rem);
@@ -23,7 +23,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.5;
 }
 
@@ -72,6 +72,10 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
